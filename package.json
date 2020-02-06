@@ -1,0 +1,31 @@
+{
+  "name": "flexilogi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "build": "postcss app.css -o docs/css/tailwind.css"
+  },
+  "keywords": [],
+  "author": "alemarzano",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.7.2",
+    "lightgallery.js": "^1.1.3",
+    "postcss-cli": "^6.1.3",
+    "siema": "^1.5.1",
+    "tailwindcss": "^1.1.3",
+    "tiny-slider": "^2.9.2",
+    "wow.js": "^1.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "fslightbox": "^3.0.8",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-file-include": "^2.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

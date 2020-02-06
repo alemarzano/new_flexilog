@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+    font-family: 'AlleynW01';
+    src: url('fonts/alleynW01-regular.woff2') format('woff2'),
+        url('fonts/alleynW01-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlleynW01';
+    src: url('fonts/alleynW01-medium.woff2') format('woff2'),
+        url('fonts/alleynW01-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlleynW01';
+    src: url('fonts/alleynW01-bold.woff2') format('woff2'),
+        url('fonts/alleynW01-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    transition: all 200ms ease-in-out;
+}
+
+body {
+    @apply font-display font-normal;
+}
+
+section {
+    @apply py-5 my-5;
+}
+
+section:first-of-type {
+    @apply mt-0;
+}
+
+/*============= MENU =============*/
+.nav-link {
+    @apply text-white py-2 px-3 rounded;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    @apply bg-indigo-300 text-white;
+}
+
+
+.nav-drill {
+    @apply flex flex-col fixed top-0 right-0 w-64 overflow-y-auto overflow-x-hidden bg-indigo-500 shadow py-3;
+}
+
+/*============= ELEMENTOS =============*/
+
+.button {
+    @apply inline-block mx-auto text-center text-indigo-500 text-base border-indigo-500 border-1 rounded-3 py-2 px-8 my-2 bg-white;
+}
+
+.button:hover {
+    @apply bg-indigo-100;
+}
+
+.button:focus {
+    @apply bg-indigo-400 text-white border-indigo-400;
+}
+
+/*  */
+.encabezados {
+    @apply text-indigo-500 font-medium text-3xl mb-4;
+}
+
+.titulo-noticia {
+    @apply text-left font-normal text-2xl text-indigo-600 mb-6 leading-none;
+}
+
+/*  */
+
+.item {
+    @apply bg-white my-2 w-40  flex flex-col items-center justify-start p-2;
+}
+.item:hover {
+    @apply shadow;
+}
+
+/*  */
+
+.translateY-50 {
+    transform:translateY(-50%)  
+}
+
+.contactos li {
+    @apply mb-2;
+}
+
+.contactos li span {
+    @apply h-1 w-4 bg-indigo-100 flex mt-2 mb-4;
+}
+
+@tailwind utilities;
+
+
+@media(min-width:768px) {
+    .item {
+        @apply w-64 mx-3 shadow-md;
+    }
+    .item:hover {
+        @apply shadow-lg;
+    }
+}
+
+@media (min-width: 1024px) {
+    .encabezados {
+        @apply text-5xl mb-10;
+    }
+
+    .titulo-noticia {
+        @apply max-w-5xl  text-3xl leading-none;
+    }
+
+    .nav-link {
+        @apply text-gray-900 mx-3 py-0;
+    }
+    .nav-link:hover, .nav-link:focus {
+        @apply text-indigo-300 bg-white;
+    }
+    .nav-active {
+        @apply text-indigo-500;
+    }    
+
+    /*  */
+
+   
+}
