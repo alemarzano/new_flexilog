@@ -8,5 +8,7 @@ wow = new WOW ({
 })
 wow.init();
 
-  
+function goBack() {
+	window.history.back();
+  }
   

@@ -147,5 +147,25 @@ $content-selector: "~ .content > article";
         }
     }
 }
+header {
+    ul {
+        display: none;
+    }
+}
+@media (min-width:768px) and (max-width:1024px) {
+    footer {
+        position: fixed;
+        bottom:0;
+        width: 100vw;
+    }
+}
 
+@media (min-width:1024px) {
+    header {
+        ul {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
 /*=============== ANIMATIONS ================*/
