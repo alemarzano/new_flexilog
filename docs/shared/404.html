@@ -12,19 +12,22 @@
     <main class="">
         <section class="pt-0 h-100">
             <div class="w-screen ">
-                <div class="container pt-20 px-4 lg:mx-auto lg:max-w-5xl lg:pt-10 md:flex lg:h-screen items-center">
-                    <div>
+                <div class="container pt-20 px-4 lg:mx-auto lg:max-w-5xl lg:pt-10 flex flex-col-reverse lg:justify-center  lg:flex-row items-center">
+                    <div class="self-start lg:self-center">
                         <h2 class="encabezados lg:pt-16 text-left"><span class="font-light">Error</span> 404</h2>
                         <a href="soluciones.html" class="button" onclick="goBack()">Volver</a>
                     </div>
                    
-                    <img src="img/404.png" alt="">
+                    <img class="-mt-20 lg:-" src="img/404.png" alt="">
                 </div>
             </div>
             
         </section>
     </main>
-    @@include('inc_footer.html')
+    <div class="fixed bottom-0 w-screen">
+        @@include('inc_footer.html')
+    </div>
+    
     
 </body>
 </html>
