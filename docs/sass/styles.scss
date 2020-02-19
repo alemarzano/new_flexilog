@@ -2,22 +2,26 @@ main {
     transition: 0.45s;
     opacity: 1;
 }
+
 .nav-drill {
     transform: translateX(100%);
     transition: 0.45s;
     height: 100vh;
     margin-top: 3.5rem;
 }
+
 .nav-is-toggled {
     main {
         opacity: .7;
     }
+
     .nav-drill {
         transform: translateX(0);
-        color:rgba(202, 211, 243, 0.25)
+        color: rgba(202, 211, 243, 0.25)
     }
 
 }
+
 /* ============== TABS ============= */
 
 /* tab setting */
@@ -31,6 +35,7 @@ $breakpoints: (medium: #{$tab-count*250px},
 $label-selector: "~ ul > li";
 $slider-selector: "~ .slider";
 $content-selector: "~ .content > article";
+
 @mixin tabs($label-selector: $label-selector,
     $slider-selector: $slider-selector,
     $content-selector: $content-selector) {
@@ -39,19 +44,23 @@ $content-selector: "~ .content > article";
             #{$label-selector}:nth-child(#{$i}) {
                 @content;
             }
+
             #{$slider-selector} {
                 transform: translateX(#{100% * ($i - 1)});
             }
+
             #{$content-selector}:nth-child(#{$i}) {
                 display: flex;
             }
         }
     }
 }
+
 .tabs {
     input[name="tab-control"] {
         display: none;
     }
+
     ul {
         list-style-type: none;
         padding-left: 0;
@@ -60,10 +69,12 @@ $content-selector: "~ .content > article";
         justify-content: space-between;
         align-items: flex-end;
         flex-wrap: wrap;
+
         li {
             box-sizing: border-box;
             width: #{100%/$tab-count};
             text-align: center;
+
             label {
                 transition: all 0.3s ease-in-out;
                 padding: 5px auto;
@@ -74,10 +85,12 @@ $content-selector: "~ .content > article";
                 transition: all 0.2s ease-in-out;
                 white-space: nowrap;
                 -webkit-touch-callout: none;
+
                 // @include user-select(none);
                 br {
                     display: none;
                 }
+
                 &:hover,
                 &:focus,
                 &:active {
@@ -86,10 +99,12 @@ $content-selector: "~ .content > article";
             }
         }
     }
+
     .slider {
         position: relative;
         width: #{100%/$tab-count};
         transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+
         .indicator {
             position: relative;
             width: $indicator-width;
@@ -100,10 +115,13 @@ $content-selector: "~ .content > article";
             border-radius: 1px;
         }
     }
+
     .content {
         margin-top: 30px;
+
         article {
             display: none;
+
             animation: {
                 name: content;
                 direction: normal;
@@ -111,51 +129,125 @@ $content-selector: "~ .content > article";
                 timing-function: ease-in-out;
                 iteration-count: 1;
             }
+
             line-height: 1.4;
         }
     }
+
     input[name="tab-control"] {
         @include tabs {
             >label {
                 cursor: default;
-                color:#233B96;
+                color: #233B96;
             }
         }
     }
+
     @keyframes content {
         from {
             opacity: 0;
             transform: translateY(5%);
         }
+
         to {
             opacity: 1;
             transform: translateY(0%);
         }
     }
+
     @media (max-width: map-get($breakpoints, medium)) {
         ul li label {
             white-space: initial;
         }
     }
+
     @media (max-width: map-get($breakpoints, small)) {
         ul li label {
             padding: 5px;
             border-radius: 5px;
         }
+
         .content {
             margin-top: 20px;
         }
     }
 }
+
 header {
     ul {
         display: none;
     }
 }
+
+#marcas {
+    div:first-of-type {
+        display: flex;
+        flex-wrap: nowrap;
+
+        >div {
+            float: none !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+
+            img {
+                max-height: 100px;
+                filter: opacity(.8);
+            }
+        }
+    }
+
+}
+
+.certificaciones {
+    a {
+        min-height: 133px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+#file_cv {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+label[for="file_cv"] {
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-left: 48px;
+
+    &:before {
+        content:'';
+        background-image: url(../img/clips.svg);        
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width:32px;
+        height:32px;
+        display: block;
+        position: absolute;
+        left:8px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
 @media (min-width:768px) and (max-width:1024px) {
     footer {
         position: fixed;
-        bottom:0;
+        bottom: 0;
         width: 100vw;
     }
 }
@@ -168,4 +260,5 @@ header {
         }
     }
 }
+
 /*=============== ANIMATIONS ================*/

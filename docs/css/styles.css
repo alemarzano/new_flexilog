@@ -60,6 +60,20 @@ main { transition: 0.45s; opacity: 1; }
 
 header ul { display: none; }
 
+#marcas div:first-of-type { display: flex; flex-wrap: nowrap; }
+
+#marcas div:first-of-type > div { float: none !important; display: flex; justify-content: center; align-items: center; padding: 16px; }
+
+#marcas div:first-of-type > div img { max-height: 100px; filter: opacity(0.8); }
+
+.certificaciones a { min-height: 133px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
+
+#file_cv { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; }
+
+label[for="file_cv"] { display: inline-block; transition: all .5s; cursor: pointer; width: fit-content; text-align: center; position: relative; padding-left: 48px; }
+
+label[for="file_cv"]:before { content: ''; background-image: url(../img/clips.svg); background-position: center; background-size: cover; background-repeat: no-repeat; width: 32px; height: 32px; display: block; position: absolute; left: 8px; top: 50%; transform: translateY(-50%); }
+
 @media (min-width: 768px) and (max-width: 1024px) { footer { position: fixed; bottom: 0; width: 100vw; } }
 
 @media (min-width: 1024px) { header ul { display: flex; align-items: center; } }
