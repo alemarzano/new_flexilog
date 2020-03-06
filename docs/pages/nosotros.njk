@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends 'layout.njk' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flexilogic | Nosotros</title>
-    @@include('inc_head.html')
+{% set page_title = "Nosotros | Flexilog"%}}}
+{% set page_description = ""%}}}
 
-</head>
+{% block header %}
+    {% import 'macros/nav-macro.njk' as nav %}
+    {{nav.active('nosotros')}}
+{% endblock %}
 
-<body>
-    @@include('inc_nav.html')
-    <main>
-        <!-- Top  -->
+{% block content %}
+     <!-- Top  -->
         <section class="mt-0 py-0">
             <!-- Top Banner -->
                 <div class="h-80 w-auto flex items-end md:items-center bg-center bg-cover bg-no-repeat md:h-96"
@@ -103,9 +99,7 @@
             <div class="absolute inset-x-0 mx-auto bg-indigo-400 h-72 w-screen absolute top-1/2 "
                 style="transform: translateY(-50%);opacity: .9;">
             </div>
-            <h3 class="z-10 text-center text-white font-medium w-88 text-xl leading-tight md:w-8/12 md:mx-auto lg:text-3xl">Somos una empresa familiar
-                dedicada a satisfacer las necesidades del mercado argentino a través de Soluciones Logísticas Integrales
-                a medida.</h3>
+            <h3 class="z-10 text-center text-white font-medium w-88 text-xl leading-tight md:w-8/12 md:mx-auto lg:text-3xl">Somos una empresa nacional dedicada a satisfacer las necesidades del mercado local a través de Soluciones Logísticas Integrales a medida.</h3>
             <div class="absolute left-0 bottom-0 h-32 w-32 overflow-x-hidden lg:w-2/12">
                 <img class="h-full w-full object-fill object-right lg:object-none" src="img/misc_02.png" alt="">
             </div>
@@ -118,10 +112,10 @@
                     <h4 class="text-gray-300 text-left text-2xl pl-2 text-center" >Certificaciones</h4>
                     <div class="flex flex-wrap justify-center lg:flex-no-wrap lg:mt-4 certificaciones">                        
                         <div class="w-1/3 my-3 lg:w-2/12 ">
-                            <a href="" download class=""><img src="img/logo_anmat.png" alt=""><p class="text-sm text-center text-indigo-300 hover:text-indigo-500">Descargar Certificado de ANMAT</p></a>
+                            <div class="flex flex-col justify-between items-center h-32"><img src="img/logo_anmat.png" alt=""><p class="text-sm text-center text-indigo-300"> Certificado de <br>ANMAT</p></div>
                         </div>
                         <div class="w-1/3 my-3 lg:w-2/12 flex justify-center items-center">
-                            <a href="" download class=""><img src="img/logo_buenaspracticas.png" alt=""><p class="text-sm text-center text-indigo-300 hover:text-indigo-500"> Descargar Certificado de Buenas Prácticas</p></a>
+                            <div class="flex flex-col justify-between items-center h-32"><img src="img/logo_buenaspracticas.png" alt=""><p class="text-sm text-center text-indigo-300">  Certificado de <br>Buenas Prácticas</p></div>
                         </div>                        
                     </div>
             </div>
@@ -129,9 +123,4 @@
         </section>
         <!-- Fin Certificaciones -->
 
-    </main>
-    @@include('inc_footer.html')
-
-</body>
-
-</html>
+{% endblock content %}

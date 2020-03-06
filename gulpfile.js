@@ -1,7 +1,7 @@
 const gulp = require('gulp');
-var fileinclude = require('gulp-file-include');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+var nunjucksRender = require('gulp-nunjucks-render');
 var reload = browserSync.reload;
 
 gulp.task('sass', () => {
@@ -9,7 +9,7 @@ gulp.task('sass', () => {
             'docs/sass/styles.scss'                               
         ])
         .pipe(sass({
-            outputStyle: 'compact'
+            outputStyle: 'expanded'
         }))
         .on('error', function (err) {
             console.log(err.toString());
@@ -19,37 +19,30 @@ gulp.task('sass', () => {
         .pipe(browserSync.stream());
 });
 
+gulp.task('nunjucks', function() {
+    return gulp.src('docs/pages/**/*.+(html|njk)')
+    .pipe(nunjucksRender({
+        path:['docs/templates'],
+        watch:true,
+    }))
+    .pipe(gulp.dest('./docs'))
+});
 
 gulp.task('js', () => {
     return gulp.src([           
         'node_modules/siema/dist/siema.min.js',
         'node_modules/wow.js/dist/wow.js',
-        'node_modules/fslightbox/index.js'
-       
         ])
         .pipe(gulp.dest('./docs/js'))
         .pipe(browserSync.stream());
 });
 
-gulp.task('fileinclude', function() {
-    gulp.src([
-        './docs/shared/*.html',
-        '!./docs/shared/inc_*.html'
-    ])
-    .pipe(fileinclude({
-        prefix:'@@',
-        basepath: '@file'
-    }))
-    .pipe(gulp.dest('./docs/'))
-    .pipe(browserSync.stream());
-});
-
 
 gulp.task('js-watch', ['js'], reload);
 gulp.task('css-watch', ['sass'], reload);
-gulp.task('include-watch', ['fileinclude'], reload);
+gulp.task('nunjucks-watch', ['nunjucks'], reload);
 
-gulp.task('server', ['sass', 'fileinclude'], () => {
+gulp.task('server', ['sass'], () => {
     browserSync.init({
         server: './docs'
     });
@@ -64,14 +57,15 @@ gulp.task('server', ['sass', 'fileinclude'], () => {
     ], ['js-watch']);
 
     gulp.watch([
-        './docs/shared/*.html',
-        './docs/*.html'
-    ], ['include-watch'])
+        'docs/pages' + '/**/*.+(html|njk)',
+        'docs/templates' + '/**/*.+(html|njk)'
+    ], ['nunjucks']);
 
+    gulp.watch('./docs/*.html')
     .on('change', browserSync.reload);
 
 });
 
 
 
-gulp.task('default', ['js','fileinclude','server'])
+gulp.task('default', ['js','nunjucks','server'])

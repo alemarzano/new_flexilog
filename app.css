@@ -47,7 +47,8 @@ section:first-of-type {
 }
 
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.active {
     @apply bg-indigo-300 text-white;
 }
 
@@ -126,7 +127,7 @@ section:first-of-type {
     .nav-link {
         @apply text-gray-900 mx-3 py-0;
     }
-    .nav-link:hover, .nav-link:focus {
+    .nav-link:hover, .nav-link:focus, .nav-link.active {
         @apply text-indigo-300 bg-white;
     }
     .nav-active {

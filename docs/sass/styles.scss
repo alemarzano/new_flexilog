@@ -192,7 +192,7 @@ header {
             padding: 16px;
 
             img {
-                max-height: 100px;
+                max-height: 56px;
                 filter: opacity(.8);
             }
         }
@@ -258,6 +258,17 @@ label[for="file_cv"] {
             display: flex;
             align-items: center;
         }
+    }
+
+    #marcas {
+        div:first-of-type {
+            >div {
+                img {
+                    max-height: 100px;
+                }
+            }
+        }
+    
     }
 }
 

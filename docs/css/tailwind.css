@@ -697,7 +697,8 @@ section:first-of-type {
 }
 
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.active {
   background-color: #617ADA;
   color: #fff;
 }
@@ -12083,7 +12084,7 @@ section:first-of-type {
     padding-bottom: 0;
   }
 
-  .nav-link:hover, .nav-link:focus {
+  .nav-link:hover, .nav-link:focus, .nav-link.active {
     color: #617ADA;
     background-color: #fff;
   }

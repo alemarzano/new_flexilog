@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'layout.njk' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flexilogic | Políticas de Calidad </title>
+{% set page_title = "Políticas de Calidad | Flexilog"%}}}
+{% set page_description = ""%}}}
 
-    @@include('inc_head.html')
-</head>
+{% block header %}
+    {% import 'macros/nav-macro.njk' as nav %}
+    {{nav.active('home')}}
+{% endblock %}
 
-<body>
-    @@include('inc_nav.html')
-    <main>
-        <section class="pt-0">
+{% block content %}
+     <section class="pt-0">
             <div class="container pt-20 px-4 lg:mx-auto lg:max-w-5xl lg:pt-10 mb-10">
                 <h2 class="encabezados lg:pt-16 text-left">Políticas y Objetivos de Calidad</h2>
                 <h5 class="text-base leading-normal text-indigo-200 ">Versión 1.0</h5>
@@ -40,13 +36,13 @@
                     impulsando el talento y el esp&iacute;ritu emprendedor de nuestros colaboradores lograremos el
                     mejoramiento continuo de nuestros productos, procesos y servicios.</p>
                 <h4 class="text-indigo-500 m-4 text-center"><strong>OBJETIVOS DE CALIDAD </strong></h4>
-                <ol class="mb-8">
-                    <li class="pl-8 text-indigo-500 mb-2">Implementar y mantener un SGC en permanente mejora.</li>
-                    <li class="pl-8 text-indigo-500 mb-2">Garantizar la calidad del servicio a trav&eacute;s de la estandarizaci&oacute;n y control de los
+                <ol class="mb-8 list-disc pl-8">
+                    <li class=" text-indigo-500 mb-2">Implementar y mantener un SGC en permanente mejora.</li>
+                    <li class="text-indigo-500 mb-2">Garantizar la calidad del servicio a trav&eacute;s de la estandarizaci&oacute;n y control de los
                         procesos.</li>
-                    <li class="pl-8 text-indigo-500 mb-2">Incrementar el nivel de satisfacci&oacute;n del cliente mediante la prestaci&oacute;n de un
+                    <li class="text-indigo-500 mb-2">Incrementar el nivel de satisfacci&oacute;n del cliente mediante la prestaci&oacute;n de un
                         excelente servicio, asesor&iacute;a t&eacute;cnica y cumplimiento en la entrega.</li>
-                    <li class="pl-8 text-indigo-500 mb-2">Actualizar permanentemente al personal, para mejorar el desempe&ntilde;o en sus funciones.</li>
+                    <li class="text-indigo-500 mb-2">Actualizar permanentemente al personal, para mejorar el desempe&ntilde;o en sus funciones.</li>
                 </ol>
                 <p class="font-medium text-lg text-indigo-400 text-right"> Diego González</p>
                 <p class="text-base leading-normal text-indigo-400 text-right"> Dirección</p>
@@ -54,8 +50,4 @@
 
 
         </section>
-    </main>
-    @@include('inc_footer.html')
-</body>
-
-</html>
+{% endblock content %}
