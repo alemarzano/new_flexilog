@@ -239,6 +239,9 @@ label[for="file_cv"]:before {
   #marcas div:first-of-type > div img {
     max-height: 100px;
   }
+  .mancha-left {
+    left: 72px !important;
+  }
 }
 
 /*=============== ANIMATIONS ================*/
