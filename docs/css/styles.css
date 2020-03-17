@@ -39,7 +39,7 @@ main {
 
 .tabs ul li {
   box-sizing: border-box;
-  width: 33.33333%;
+  width: 25%;
   text-align: center;
 }
 
@@ -61,11 +61,13 @@ main {
 
 .tabs ul li label:hover, .tabs ul li label:focus, .tabs ul li label:active {
   outline: 0;
+  font-weight: 700;
+  border-color: #233B96;
 }
 
 .tabs .slider {
   position: relative;
-  width: 33.33333%;
+  width: 25%;
   transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
 }
 
@@ -132,6 +134,19 @@ main {
   display: flex;
 }
 
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
+  cursor: default;
+  color: #233B96;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .slider {
+  transform: translateX(300%);
+}
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .content > article:nth-child(4) {
+  display: flex;
+}
+
 @keyframes content {
   from {
     opacity: 0;
@@ -143,16 +158,30 @@ main {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
+  .tabs ul {
+    overflow-x: scroll;
+  }
+  .tabs ul li {
+    width: 50%;
+  }
   .tabs ul li label {
     white-space: initial;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+  }
+  .tabs ul li label:active {
+    font-weight: 700;
+    border-color: #233B96;
+  }
+  .tabs .slider {
+    display: none;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .tabs ul li label {
     padding: 5px;
-    border-radius: 5px;
   }
   .tabs .content {
     margin-top: 20px;
