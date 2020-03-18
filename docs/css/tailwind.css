@@ -12080,8 +12080,8 @@ section:first-of-type {
     color: #0F0F0F;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .nav-link:hover, .nav-link:focus, .nav-link.active {
