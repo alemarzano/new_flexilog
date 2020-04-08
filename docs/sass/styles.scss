@@ -25,7 +25,7 @@ main {
 /* ============== TABS ============= */
 
 /* tab setting */
-$tab-count: 4;
+$tab-count: 3;
 $indicator-width: 100%;
 $indicator-height: 2px;
 /* breakpoints */
@@ -70,7 +70,6 @@ $content-selector: "~ .content > article";
         align-items: flex-end;
         flex-wrap: wrap;
 
-
         li {
             box-sizing: border-box;
             width: #{100%/$tab-count};
@@ -87,8 +86,6 @@ $content-selector: "~ .content > article";
                 white-space: nowrap;
                 -webkit-touch-callout: none;
 
-
-
                 // @include user-select(none);
                 br {
                     display: none;
@@ -98,8 +95,6 @@ $content-selector: "~ .content > article";
                 &:focus,
                 &:active {
                     outline: 0;
-                    font-weight: 700;
-                    border-color: #233B96;
                 }
             }
         }
@@ -161,34 +156,15 @@ $content-selector: "~ .content > article";
     }
 
     @media (max-width: map-get($breakpoints, medium)) {
-        ul {
-            overflow-x: scroll;
-
-
-            li {
-                width: #{100%/($tab-count/2)};
-                label {
-                    white-space: initial;
-                    border-bottom: 2px solid transparent;
-                    border-radius: 0;
-
-                    &:active {
-                        font-weight: 700;
-                        border-color: #233B96;
-                    }
-                }
-            }
-        }
-
-        .slider {
-            display: none;
+        ul li label {
+            white-space: initial;
         }
     }
 
     @media (max-width: map-get($breakpoints, small)) {
         ul li label {
             padding: 5px;
-            // border-radius: 5px;
+            border-radius: 5px;
         }
 
         .content {
