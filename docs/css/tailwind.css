@@ -632,36 +632,54 @@ video {
 }
 
 @font-face {
-  font-family: 'AlleynW01';
+  font-family: 'Gotham Rounded';
 
-  src: url('fonts/alleynW01-regular.woff2') format('woff2'),
-        url('fonts/alleynW01-regular.woff') format('woff');
+  src: url('./fonts/GothamRounded-Light.eot');
+
+  src: url('./fonts/GothamRounded-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/GothamRounded-Light.woff2') format('woff2'),
+        url('./fonts/GothamRounded-Light.woff') format('woff'),
+        url('./fonts/GothamRounded-Light.ttf') format('truetype');
 
   font-weight: 400;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'AlleynW01';
+  font-family: 'Gotham Rounded';
 
-  src: url('fonts/alleynW01-medium.woff2') format('woff2'),
-        url('fonts/alleynW01-medium.woff') format('woff');
+  src: url('./fonts/GothamRounded-Book.eot');
+
+  src: url('./fonts/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/GothamRounded-Book.woff2') format('woff2'),
+        url('./fonts/GothamRounded-Book.woff') format('woff'),
+        url('./fonts/GothamRounded-Book.ttf') format('truetype');
 
   font-weight: 500;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'AlleynW01';
+  font-family: 'Gotham Rounded';
 
-  src: url('fonts/alleynW01-bold.woff2') format('woff2'),
-        url('fonts/alleynW01-bold.woff') format('woff');
+  src: url('./fonts/GothamRounded-Bold.eot');
+
+  src: url('./fonts/GothamRounded-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/GothamRounded-Bold.woff2') format('woff2'),
+        url('./fonts/GothamRounded-Bold.woff') format('woff'),
+        url('./fonts/GothamRounded-Bold.ttf') format('truetype');
 
   font-weight: 700;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 * {
@@ -670,7 +688,7 @@ video {
 }
 
 body {
-  font-family: 'AlleynW01', sans-serif;
+  font-family: 'Gotham Rounded', sans-serif;
   font-weight: 400;
 }
 
@@ -3761,15 +3779,15 @@ section:first-of-type {
 }
 
 .font-display {
-  font-family: 'AlleynW01', sans-serif;
+  font-family: 'Gotham Rounded', sans-serif;
 }
 
 .font-body {
-  font-family: 'AlleynW01', sans-serif;
+  font-family: 'Gotham Rounded', sans-serif;
 }
 
 .font-html {
-  font-family: 'AlleynW01', sans-serif;
+  font-family: 'Gotham Rounded', sans-serif;
 }
 
 .font-hairline {
@@ -15089,15 +15107,15 @@ section:first-of-type {
   }
 
   .sm\:font-display {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .sm\:font-body {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .sm\:font-html {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .sm\:font-hairline {
@@ -26368,15 +26386,15 @@ section:first-of-type {
   }
 
   .md\:font-display {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .md\:font-body {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .md\:font-html {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .md\:font-hairline {
@@ -37647,15 +37665,15 @@ section:first-of-type {
   }
 
   .lg\:font-display {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .lg\:font-body {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .lg\:font-html {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .lg\:font-hairline {
@@ -48926,15 +48944,15 @@ section:first-of-type {
   }
 
   .xl\:font-display {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .xl\:font-body {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .xl\:font-html {
-    font-family: 'AlleynW01', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
   }
 
   .xl\:font-hairline {

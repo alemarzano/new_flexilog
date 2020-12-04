@@ -7,9 +7,9 @@ module.exports = {
         xl: '1280px',
      },
      fontFamily: {
-        display: ["'AlleynW01'", 'sans-serif'],
-        body: ["'AlleynW01'", 'sans-serif'],
-        html: ["'AlleynW01'", 'sans-serif'],
+        display: ["'Gotham Rounded'", 'sans-serif'],
+        body: ["'Gotham Rounded'", 'sans-serif'],
+        html: ["'Gotham Rounded'", 'sans-serif'],
      },
      borderWidth: {
         default: '0',
