@@ -95,7 +95,7 @@ main {
 
 .tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
   cursor: default;
-  color: #233B96;
+  color: #fff;
 }
 
 .tabs input[name="tab-control"]:nth-of-type(1):checked ~ .slider {
@@ -108,7 +108,7 @@ main {
 
 .tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
   cursor: default;
-  color: #233B96;
+  color: #fff;
 }
 
 .tabs input[name="tab-control"]:nth-of-type(2):checked ~ .slider {
@@ -121,7 +121,7 @@ main {
 
 .tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
   cursor: default;
-  color: #233B96;
+  color: #fff;
 }
 
 .tabs input[name="tab-control"]:nth-of-type(3):checked ~ .slider {
@@ -223,14 +223,6 @@ label[for="file_cv"]:before {
   transform: translateY(-50%);
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-  }
-}
-
 @media (min-width: 1024px) {
   header ul {
     display: flex;
@@ -241,6 +233,11 @@ label[for="file_cv"]:before {
   }
   .mancha-left {
     left: 72px !important;
+  }
+  #marcas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 8px;
   }
 }
 

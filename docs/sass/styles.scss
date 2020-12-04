@@ -138,7 +138,7 @@ $content-selector: "~ .content > article";
         @include tabs {
             >label {
                 cursor: default;
-                color: #233B96;
+                color: #fff;
             }
         }
     }
@@ -244,14 +244,6 @@ label[for="file_cv"] {
     }
 }
 
-@media (min-width:768px) and (max-width:1024px) {
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100vw;
-    }
-}
-
 @media (min-width:1024px) {
     header {
         ul {
@@ -273,6 +265,11 @@ label[for="file_cv"] {
 
     .mancha-left {
         left: 72px !important
+    }
+    #marcas {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 8px;
     }
 }
 

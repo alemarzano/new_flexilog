@@ -60,7 +60,7 @@ section:first-of-type {
 /*============= ELEMENTOS =============*/
 
 .button {
-    @apply inline-block mx-auto text-center text-indigo-500 text-base border-indigo-500 border-1 rounded-3 py-2 px-8 my-2 bg-white;
+    @apply inline-block mx-auto text-center text-pink-500 text-base border-indigo-500 border-1 rounded-3 py-2 px-8 my-2 bg-white;
 }
 
 .button:hover {
@@ -102,13 +102,15 @@ section:first-of-type {
 .contactos li span {
     @apply h-1 w-4 bg-indigo-100 flex mt-2 mb-4;
 }
-
+.services {
+    @apply hidden;
+}
 @tailwind utilities;
 
 
 @media(min-width:768px) {
     .item {
-        @apply w-64 mx-3 shadow-md;
+        @apply w-64 mx-3;
     }
     .item:hover {
         @apply shadow-lg;
@@ -125,15 +127,17 @@ section:first-of-type {
     }
 
     .nav-link {
-        @apply text-gray-900 mx-3 py-1;
+        @apply text-pink-600 mx-3 py-1 text-2xl;
     }
     .nav-link:hover, .nav-link:focus, .nav-link.active {
-        @apply text-indigo-300 bg-white;
+        @apply text-pink-700 bg-white;
     }
     .nav-active {
         @apply text-indigo-500;
     }    
-
+    .services {
+        @apply flex ;
+    }
     /*  */
 
    
