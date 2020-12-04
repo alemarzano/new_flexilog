@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp",
+    "app": "gulp",
     "build": "postcss app.css -o docs/css/tailwind.css"
   },
   "keywords": [],
