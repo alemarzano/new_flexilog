@@ -223,25 +223,12 @@ label[for="file_cv"] {
     display: inline-block;
     transition: all .5s;
     cursor: pointer;
-    width: fit-content;
     text-align: center;
     position: relative;
     padding-left: 48px;
+    width:100%;
 
-    &:before {
-        content: '';
-        background-image: url(../img/clips.svg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 32px;
-        height: 32px;
-        display: block;
-        position: absolute;
-        left: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+    
 }
 
 @media (min-width:1024px) {
@@ -253,11 +240,12 @@ label[for="file_cv"] {
     }
 
     #marcas {
-        div:first-of-type {
-            >div {
-                img {
-                    max-height: 100px;
-                }
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 8px;
+        div {
+            img {
+                max-height: 100px;
             }
         }
 
@@ -267,9 +255,7 @@ label[for="file_cv"] {
         left: 72px !important
     }
     #marcas {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 8px;
+        
     }
 }
 
