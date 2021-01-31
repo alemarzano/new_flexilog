@@ -41,7 +41,7 @@
       <a class="text-center" href="https://www.linkedin.com/company/40907135/admin/" target="_blank">
             <img class="h-8 inline-block mb-4 lg:h-16" src="<?= site_url('/assets/img/ico_in.png')?>" alt="">
         </a>
-        <h6 class="text-indigo-500 text-center text-base">Sincronizamos Negocios | © Flexilog 2021</h6>
+        <h6 class="text-indigo-500 text-center text-base">Sincronizamos Negocios | © Flexilog 2021 | CUIT 30-71657258-3</h6>
    </div>
 
 </footer>
