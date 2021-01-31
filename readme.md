@@ -79,8 +79,18 @@ Para prepocesar sass:
 sass --watch sass/styles.scss css/styles.css
 ```
 
-## Construido con 🛠️
+## Aclaración  :exclamation:
 
+La carpeta docs solo contiene vistas html que fueron usadas para validar el maquetado. 
+
+>\repositorio_clonado\docs>
+
+No es necesaria para la puesta en producción peroa fines prácticos sirve para comparar vistas si es necesario.
+A la misma se puede acceder en [esta url](https://alemarzano.github.io/new_flexilog/) 
+
+
+
+## Construido con 🛠️
 
 * [Codeigniter](https://www.codeigniter.com/userguide3/index.html) - Framework PHP
 * [TailwindCSS](https://tailwindcss.com/docs) - Librería CSS
