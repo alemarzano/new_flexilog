@@ -1,0 +1,15 @@
+{
+	"description": "Sitio Web Institucional Flexilog",
+	"name": "encendercom/flexilog-institucional",
+	"type": "project",
+	"homepage": "http://flexilog.encenderlabs.com/",
+	"license": "propietary",
+	"require": {
+		"php": ">=7.2",
+		"phpmailer/phpmailer": "6.1.5",
+      "ext-json": "*"
+    },
+	"config": {
+		"vendor-dir": "./application/vendor"
+	}
+}

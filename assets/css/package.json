@@ -1,0 +1,28 @@
+{
+  "name": "flexilog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss build app.css -o styletw.css",
+    "autoprefixer": "postcss styletw.css -u autoprefixer --no-map -o styletw.css",
+    "minify": "postcss styletw.css -u cssnano --no-map -o styletw.min.css",
+    "build": "npm run tailwind && npm run autoprefixer",
+    "production": "npm run tailwind && npm run autoprefixer && npm run minify"
+  },
+  "keywords": [],
+  "author": "alemarzano",
+  "license": "ISC",
+  "dependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "postcss": "^8.2.4"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.4"
+  },
+  "description": ""
+}
